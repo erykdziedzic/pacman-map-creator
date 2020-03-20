@@ -1,0 +1,107 @@
+body {
+  background-color: black;
+  margin: 0;
+  user-select: none;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+header {
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  background-color: black;
+  height: 22px;
+}
+
+.half {
+  position: absolute;
+  flex-direction: column;
+  height: calc(40 * 53px);
+  width: calc(16 * 55px);
+  background-color: black;
+}
+
+.map {
+  left: calc(16 * 53px + 16px);
+  top: 0px;
+}
+
+.sheet {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sprite {
+  border: 2px dotted white;
+  position: absolute;
+}
+
+.sprite:hover {
+  border: 2px dotted red;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.sprite:not(:hover){
+  opacity: 0.5;
+}
+
+.selected {
+  border: 2px dotted red;
+  margin: 0;
+}
+
+.pasting {
+  border: 2px dotted lime;
+  margin: 0;
+}
+
+.menu {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  left: 50vw;
+  margin-left: -100px;
+  margin-top: -96px;
+  position: fixed;
+  top: 50vh;
+  width: 200px;
+}
+
+.menuOption {
+  align-items: center;
+  border-bottom: 1px dotted black;
+  display: flex;
+  height: 32px;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+.menuOption:hover {
+  background-color: #BBB;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 99vw;
+  height: 100vh;
+  background-color: black;
+  opacity: .6; 
+}
+
+.selectedBox {
+  border: 2px dotted red;
+  margin: 0;
+}
+
+#selectionBox {
+  position: absolute;
+  background-color: yellow;  
+  pointer-events: none;
+}
